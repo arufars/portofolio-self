@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className="font-statoshi">
-        <main className="flex min-h-screen flex-col items-center justify-center py-24 xl:px-20 2xl:px-80">
+        <main className="mx-auto flex min-h-screen flex-col items-center px-2 py-10 sm:px-10 lg:justify-center xl:px-20 2xl:px-80 2xl:py-24">
           {children}
         </main>
       </body>

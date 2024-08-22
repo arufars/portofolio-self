@@ -16,16 +16,17 @@ const stackSkill = [
 
 export default function AboutMe() {
   return (
-    <div className="p-6">
+    <div className="p-6 relative">
       <h2 className="text-lg 2xl:text-xl font-statoshi-bold">About Me</h2>
       <p className="text-slate-300 leading-relaxed text-sm">
-        Hi, I'm Firmansyah, a full stack developer specializing in dynamic web
-        applications with modern technologies. My tools of choice include:
+        Hi, I&apos;m Firmansyah, a full stack developer specializing in dynamic
+        web applications with modern technologies. My primary tools of choice
+        include:
       </p>
 
       <h2 className="pt-2">My Stack</h2>
 
-      <ul className="text-[12px] text-slate-300 flex flex-wrap gap-x-1  gap-y-1 pt-2">
+      <ul className="text-[12px] text-slate-300 flex flex-wrap gap-x-1 gap-y-1 pt-2">
         {stackSkill.map((skill, idx) => (
           <li
             key={idx}
@@ -43,13 +44,14 @@ export default function AboutMe() {
 
       <div className="flex flex-col gap-y-2 pt-4 leading-relaxed">
         <p className="text-slate-300 text-sm">
-          I’m a passionate Informatics Engineering student and full stack
-          developer with a strong focus on the JavaScript ecosystem
+          I&apos;m a passionate Informatics Engineering student and full stack
+          developer with a strong focus on the JavaScript ecosystem.
         </p>
         <p className="text-slate-300 text-sm">
           My hobbies include nurturing plants, and I have a deep fascination
-          with flora, fauna, and world history. While I have my go-to tools, I’m
-          flexible and always open to using the best solution for any project.
+          with flora, fauna, and world history. While I have my go-to tools,
+          I&apos;m flexible and always open to using the best solution for any
+          project.
         </p>
       </div>
     </div>
