@@ -1,3 +1,5 @@
+"use client";
+
 import { BellIcon, CalendarIcon, FileTextIcon } from "@radix-ui/react-icons";
 import { ArrowUpRight } from "lucide-react";
 
