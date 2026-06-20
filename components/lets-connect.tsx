@@ -3,19 +3,19 @@ import Link from "next/link";
 const socialLinks = [
   {
     name: "LinkedIn",
-    url: "https://www.linkedin.com/in/your-linkedin",
+    url: "https://www.linkedin.com/in/ghifar-firmansyah/",
   },
   {
     name: "Github",
-    url: "https://github.com/username-your",
+    url: "https://github.com/arufars",
   },
   {
     name: "Twitter",
-    url: "https://twitter.com/your-twitter",
+    url: "https://twitter.com/",
   },
   {
     name: "Discord",
-    url: "https://discord.com/your-discord",
+    url: "https://discord.com",
   },
 ];
 
