@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const sosmed = [
+const socialLinks = [
   {
     name: "LinkedIn",
     url: "https://www.linkedin.com/in/your-linkedin",
@@ -19,7 +19,7 @@ const sosmed = [
   },
 ];
 
-export default function LetConnect() {
+export default function LetsConnect() {
   return (
     <div className="py-8 px-6">
       <h1 className="font-statoshi-bold text-xl">
@@ -28,12 +28,12 @@ export default function LetConnect() {
       <div className="py-2">
         <h4 className="text-slate-500">Social</h4>
         <ul>
-          {sosmed.map((sosmed, idx) => (
+          {socialLinks.map((link, idx) => (
             <li
               key={idx}
               className="text-slate-200 hover:text-slate-400 transition-all relative hover:translate-x-3"
             >
-              <Link href={sosmed.url}>{sosmed.name}</Link>
+              <Link href={link.url}>{link.name}</Link>
             </li>
           ))}
         </ul>

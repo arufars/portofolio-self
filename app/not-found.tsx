@@ -1,4 +1,4 @@
-import CurrentPath from "#/components/client/current-path-com";
+import CurrentPath from "#/components/client/current-path";
 import Link from "next/link";
 
 export default function NotFound() {

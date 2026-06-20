@@ -6,6 +6,7 @@ const stackSkill = [
   "Svelte",
   "Node.js",
   "Express",
+  "Laravel",
   "PostgreSQL",
   "MySQL",
   "MongoDB",
@@ -57,15 +58,3 @@ export default function AboutMe() {
     </div>
   );
 }
-
-// <p className="text-slate-300 text-sm">
-//           I’m a passionate Informatics Engineering student and full stack
-//           developer with a strong focus on the JavaScript ecosystem,
-//           particularly Next.js. I enjoy both coding and the design process,
-//           ensuring every project looks its best.
-//         </p>
-//         <p className="text-slate-300 text-sm">
-//           My hobbies include nurturing plants, and I have a deep fascination
-//           with flora, fauna, and world history. While I have my go-to tools, I’m
-//           flexible and always open to using the best solution for any project.
-//         </p>
