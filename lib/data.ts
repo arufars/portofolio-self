@@ -15,7 +15,7 @@ export const projects = [
     description: "A highly specific collection of VS Code snippets tailored for Next.js 14 (and 13) App Router architectures. It drastically reduces boilerplate coding times by providing quick-access commands to generate Server Components, Client Components, Actions, and metadata structures.",
     useCase: "Helps frontend developers increase productivity and maintain consistent coding standards while working in Next.js modern projects.",
     techStack: ["VS Code Extension API", "JSON", "Regex"],
-    link: "https://nextjs.org",
+    link: "https://marketplace.visualstudio.com/items?itemName=yuzu.snippets-next-13",
   },
   {
     slug: "gallery-blue-archive",
@@ -33,7 +33,7 @@ export const projects = [
     description: "FeliLearn merges educational technology with artificial intelligence. By utilizing a Convolutional Neural Network (CNN) based image classification model, users can upload photos of various feline species and instantly get identification alongside educational facts about the species.",
     useCase: "Useful for biology students, wildlife enthusiasts, and educators looking to make learning about Felidae interactive and engaging.",
     techStack: ["Python", "TensorFlow", "React", "FastAPI"],
-    link: "https://example.com/felilearn",
+    link: "https://feli-learn.vercel.app/",
   },
   {
     slug: "khass-hair-style",
