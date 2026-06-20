@@ -3,7 +3,6 @@
 import { BellIcon } from "@radix-ui/react-icons";
 
 import dynamic from "next/dynamic";
-import Link from "next/link";
 
 import { BentoCard, BentoGrid } from "#/components/magicui/bento-grid";
 import MySelf from "#/components/my-self";
@@ -13,7 +12,6 @@ import { cn } from "#/lib/utils";
 import Projects from "./projects";
 import BlogBento from "./blog-bento";
 
-
 const AnimatedShinyText = dynamic(
   () => import("#/components/magicui/animated-shiny-text"),
   { ssr: false },
@@ -21,13 +19,10 @@ const AnimatedShinyText = dynamic(
 
 const DigitalClock = dynamic(
   () => import("#/components/client/digital-clock"),
-  {
-    ssr: false,
-  },
+  { ssr: false },
 );
 
 const centerFull = "h-full w-full flex justify-center items-center";
-
 
 const features = [
   {
@@ -37,8 +32,9 @@ const features = [
     href: "/",
     cta: "",
     background: <MySelf />,
+    //  mobile: full width | tablet: 2 cols | desktop: cols 1-3, rows 1-5
     className:
-      "col-span-6 xl:col-start-1 xl:col-end-4 xl:row-start-1 xl:row-end-6 w-full h-full",
+      "col-span-1 md:col-span-2 xl:col-start-1 xl:col-end-4 xl:row-start-1 xl:row-end-6 w-full h-full",
     withHoverHidden: false,
   },
   {
@@ -48,8 +44,9 @@ const features = [
     href: "/",
     cta: "",
     background: <AboutMe />,
+    // mobile: full width | tablet: 2 cols | desktop: col 4, rows 1-8
     className:
-      "col-span-6 xl:col-start-4 xl:col-end-5 xl:row-start-1 xl:row-end-9",
+      "col-span-1 md:col-span-2 xl:col-start-4 xl:col-end-5 xl:row-start-1 xl:row-end-9",
     withHoverHidden: false,
   },
   {
@@ -60,7 +57,9 @@ const features = [
     href: "/",
     cta: "Learn more",
     background: <Projects />,
-    className: "xl:row-start-6 xl:row-end-9 xl:col-start-2 xl:col-end-4",
+    // mobile: full width | tablet: 2 cols | desktop: cols 2-3, rows 6-8
+    className:
+      "col-span-1 md:col-span-2 xl:col-start-2 xl:col-end-4 xl:row-start-6 xl:row-end-9",
     withHoverBorderCard: false,
   },
   {
@@ -70,7 +69,9 @@ const features = [
     href: "/",
     cta: "Learn more",
     background: <LetsConnect />,
-    className: "xl:col-start-1 xl:col-end-2 xl:row-start-6 xl:row-end-10",
+    // mobile: full width | tablet: 1 col | desktop: col 1, rows 6-9
+    className:
+      "col-span-1 xl:col-start-1 xl:col-end-2 xl:row-start-6 xl:row-end-10",
     withHoverHidden: false,
   },
   {
@@ -78,14 +79,15 @@ const features = [
     name: "Digital Clock",
     description: "Current local time.",
     href: "/",
-    cta: "Learn more",
+    cta: "",
     background: (
       <div className={cn(centerFull, "text-center")}>
         <DigitalClock />
       </div>
     ),
+    // mobile: full width | tablet: 1 col | desktop: col 2, row 9
     className:
-      "xl:col-start-2 xl:col-end-2 xl:row-start-9 xl:row-end-10 w-full h-full",
+      "col-span-1 xl:col-start-2 xl:col-end-3 xl:row-start-9 xl:row-end-10 w-full h-full",
     withHoverHidden: false,
   },
   {
@@ -95,8 +97,9 @@ const features = [
     cta: "",
     href: "/blog",
     background: <BlogBento />,
+    // mobile: full width | tablet: 1 col | desktop: col 3, row 9
     className:
-      "xl:col-start-3 xl:col-end-3 xl:row-start-9 xl:row-end-10 items-center justify-center",
+      "col-span-1 xl:col-start-3 xl:col-end-4 xl:row-start-9 xl:row-end-10 items-center justify-center",
     withHoverHidden: false,
   },
   {
@@ -104,7 +107,7 @@ const features = [
     name: "Footer",
     description: "",
     href: "/",
-    cta: "Learn more",
+    cta: "",
     background: (
       <div className="flex h-full items-center justify-center gap-x-1 px-2">
         <AnimatedShinyText className="w-4/5 text-sm text-slate-400">
@@ -113,15 +116,17 @@ const features = [
         </AnimatedShinyText>
       </div>
     ),
+    // mobile: full width | tablet: 2 cols | desktop: col 4, row 9
     className:
-      "xl:col-start-4 xl:col-end-5 xl:row-start-9 xl:row-end-10 items-center justify-center",
+      "col-span-1 md:col-span-2 xl:col-start-4 xl:col-end-5 xl:row-start-9 xl:row-end-10 items-center justify-center",
     withHoverHidden: false,
   },
 ];
 
 export function BentoDemo() {
   return (
-    <BentoGrid className="h-[700px] lg:grid-rows-3 xl:grid-rows-9">
+    // mobile: auto height | desktop: fixed 700px with 9 explicit rows
+    <BentoGrid className="xl:h-[700px] xl:grid-rows-9">
       {features.map((feature, index) => (
         <BentoCard key={`${feature.name}-${index}`} {...feature} />
       ))}
