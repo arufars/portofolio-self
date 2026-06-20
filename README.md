@@ -1,36 +1,147 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
 
-## Getting Started
+# ✦ Firmansyah — Personal Portfolio
 
-First, run the development server:
+**A modern, minimal portfolio website built with Next.js 16 & Tailwind CSS.**
+
+[![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-38bdf8?style=flat-square&logo=tailwindcss)](https://tailwindcss.com/)
+[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
+
+</div>
+
+---
+
+## 📸 Preview
+
+> Dark mode · Bento grid layout · Glassmorphism UI
+
+---
+
+## ✨ Features
+
+- **Bento Grid** — dynamic card layout for sections (Hero, About, Projects, Clock, Connect)
+- **Project Detail Pages** — per-project page with tech stack, use case, and prev/next navigation
+- **Marquee Projects** — animated scrolling showcase of all works
+- **Digital Clock** — real-time local clock in the bento card
+- **Satoshi Font** — clean & modern sans-serif typography
+- **Dark Mode** — dark-first design, consistent neutral palette
+- **Glassmorphism** — subtle blur, border, and shadow effects throughout
+- **SEO Ready** — metadata per page via Next.js `generateMetadata`
+
+---
+
+## 🗂️ Project Structure
+
+```
+├── app/
+│   ├── layout.tsx          # Root layout (font, metadata)
+│   ├── page.tsx            # Home page
+│   ├── globals.css         # Global styles & Satoshi font
+│   ├── not-found.tsx       # Custom 404 page
+│   └── project/
+│       └── [slug]/
+│           └── page.tsx    # Dynamic project detail page
+│
+├── components/
+│   ├── bento-demo.tsx      # Main bento grid composition
+│   ├── my-self.tsx         # Hero/intro card
+│   ├── about-me.tsx        # About Me card with tech stack
+│   ├── projects.tsx        # Marquee project list
+│   ├── lets-connect.tsx    # Social links card
+│   ├── blog-bento.tsx      # Blog link card
+│   ├── icon.tsx            # Shared icon components
+│   ├── client/
+│   │   ├── digital-clock.tsx   # Real-time clock (client)
+│   │   └── current-path.tsx    # Pathname display (client)
+│   ├── magicui/
+│   │   ├── bento-grid.tsx      # BentoCard & BentoGrid primitives
+│   │   ├── marquee.tsx         # Infinite marquee animation
+│   │   └── animated-shiny-text.tsx
+│   └── ui/
+│       └── button.tsx          # shadcn/ui Button
+│
+├── lib/
+│   ├── data.ts             # Projects data source
+│   └── utils.ts            # `cn()` utility
+│
+└── public/
+    └── github.svg
+```
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| [Next.js 15](https://nextjs.org/) | React framework (App Router) |
+| [TypeScript](https://www.typescriptlang.org/) | Type safety |
+| [Tailwind CSS](https://tailwindcss.com/) | Utility-first styling |
+| [Radix UI Icons](https://www.radix-ui.com/icons) | Icon set |
+| [Lucide React](https://lucide.dev/) | Additional icons |
+| [Satoshi Font](https://www.fontshare.com/fonts/satoshi) | Typography |
+| [shadcn/ui](https://ui.shadcn.com/) | UI primitives (Button) |
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js `>= 18`
+- npm / bun
+
+### Installation
+
+```bash
+# Clone the repo
+git clone https://github.com/arufars/portofolio-self.git
+cd portofolio-self
+
+# Install dependencies
+npm install
+# or
+bun install
+```
+
+### Development
 
 ```bash
 npm run dev
 # or
-yarn dev
-# or
-pnpm dev
-# or
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+npm run build
+npm run start
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 📦 Adding a New Project
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Edit [`lib/data.ts`](./lib/data.ts) and add a new entry to the `projects` array:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```ts
+{
+  slug: "my-new-project",       // used as URL: /project/my-new-project
+  name: "My New Project",
+  body: "Short description shown in the card.",
+  description: "Full description shown on the detail page.",
+  useCase: "Who is this for and why it was built.",
+  techStack: ["Next.js", "TypeScript"],
+  link: "https://your-live-url.com", // use "#" if not deployed yet
+}
+```
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📄 License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+MIT © [Firmansyah](https://github.com/arufars)
